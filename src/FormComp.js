@@ -10,14 +10,16 @@ export default class FormComp extends Component {
                         name="first"
                         type="text"
                         maxLength="15"
-                        placeholder="Write your name.."
+                        placeholder="Type your name.."
+                        // Here we get the state value from father (App.js):
                         value={this.props.first}
+                         // Here we lift state from this comp to father (App.js):
                         onChange={this.props.handleChange}
                     />
                 </label>
                 <label> Dynamic Color: 
                     <select name="color" value={this.props.color} onChange={this.props.handleChange}>
-                        <option selected hidden>Pick your favorite Color:</option>
+                        <option defaultValue hidden>Pick your favorite Color:</option>
                         <option value="default">Default</option>
                         <option value="red">Red</option>
                         <option value="blue">Blue</option>
@@ -25,11 +27,6 @@ export default class FormComp extends Component {
                         <option value="green">Green</option>
                     </select>
                 </label>
-                <div className="dynamic-color">
-                    <div style={{background: this.props.color === "default" ? "" : this.props.color}}>
-                    <h3>{this.props.first}</h3>
-                    </div>
-                </div>
             </form>
         );
     }

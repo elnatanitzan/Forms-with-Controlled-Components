@@ -10,6 +10,11 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+h1 {
+    text-align: center;
+    font-size: 27px;
+}
+
 form {
     display: grid;
     place-items: center;
@@ -34,31 +39,19 @@ form {
             cursor: pointer;
         }   
     }
+}
 
-    .dynamic-color {
-        display: grid;
-        place-items: center; 
-        margin-top: 60px;
-        
-        div {
-            display: grid;
-            place-items: center;
-            width: 150px;
-            height: 150px;
-            border: 3px whitesmoke solid;
-            border-radius: 50%;
-            transition: background .7s;
-            position: relative;
-            text-align: center;
+.dynamic-color {
+    display: grid;
+    place-items: center; 
+    margin-top: 60px;
 
-            h3 {
-                position: absolute;
-                width: 100%;
-                white-space: nowrap;
-                word-wrap: hidden;
-                overflow: hidden;
-                color: rgb(160, 159, 159);
-            }
+    .circle {
+        h3 {
+            white-space: nowrap;
+            word-wrap: hidden;
+            overflow: hidden;
+            color: rgb(160, 159, 159);
         }
     }
 }
